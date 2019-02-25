@@ -16,7 +16,7 @@ public class Calculator {
 	
 	/*
 	 * @param total		Integer variable that all of the operations are performed on.
-	 * 					total will be the number that is always added to or subtracted from, for example.
+	 * total will be the number that is always added to or subtracted from, for example.
 	 */
 	
 	private int total;
@@ -36,7 +36,7 @@ public class Calculator {
 	 */
 	
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/*
@@ -45,7 +45,7 @@ public class Calculator {
 	 */
 	
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/*
@@ -54,7 +54,7 @@ public class Calculator {
 	 */
 	
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/*
@@ -63,16 +63,24 @@ public class Calculator {
 	 */
 	
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/*
 	 * @param value		Integer that the total will be divided by.
-	 * Takes parameter "value" and will divide the total by it.
+	 * Takes parameter "value" and will divide the total by it. If the value
+	 * is 0, then we set the total equal to 0.
 	 */
 	
 	public void divide (int value) {
-		
+		if(value == 0)
+		{
+			total = 0;
+		}
+		else
+		{
+			total = total / value;
+		}
 	}
 	
 	/*
